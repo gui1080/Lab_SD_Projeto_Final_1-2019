@@ -74,18 +74,17 @@ signal Out_Contador_up_down, Out_FullAdder, Out_stack, Out_MUX: STD_LOGIC_VECTOR
 
 begin
 
-deco_in <= opcode & flag; 
-jaddr <= "00000000";
+deco_in_f <= opcode & flag; 
 
 U0: opcodeDecoder port map ( deco_in_f, deco_out_f);
 
-U1: FullAdder_8bits port map("00000000", Out_Contador_up_down, deco_out_f(6), Out_FullAdder, Cout_Full_Adder);
+U1: FullAdder_8bits port map("00000000", Out_Contador_up_down, deco_out_f(0), Out_FullAdder, Cout_Full_Adder);
 
-U2: stack port map(clk, clr, deco_out_f(5 downto 4), Out_FullAdder, Out_stack);
+U2: stack port map(clk, clr, deco_out_f(2 downto 1), Out_FullAdder, Out_stack);
 
-U3: MUX4_8 port map(baddr, jaddr, Out_stack, "00000000", deco_out_f(3 downto 2), Out_MUX);
+U3: MUX4_8 port map(baddr, jaddr, Out_stack, "00000000", deco_out_f(4 downto 3), Out_MUX);
 
-U4: unidade_updown port map('0', clr, deco_out_f[1], clk, deco_out_f(0), Out_MUX, off_f, Out_Contador_up_down);
+U4: unidade_updown port map('0', clr, deco_out_f(5), clk, deco_out_f(6), Out_MUX, off_f, Out_Contador_up_down);
 
 Q <= Out_Contador_up_down; 
 

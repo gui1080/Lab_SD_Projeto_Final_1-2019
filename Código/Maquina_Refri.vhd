@@ -12,9 +12,8 @@ entity Maquina_Refri is
            REFRI_RETIRADO : in STD_LOGIC;
            RETURN_COIN : out STD_LOGIC;
            REFRI_DISPONIVEL: out STD_LOGIC;
-			  output_7seg : out STD_LOGIC_VECTOR (6 downto 0);
-			  output_an : out STD_LOGIC_VECTOR (3 downto 0)
-
+			     output_7seg : out STD_LOGIC_VECTOR (6 downto 0);
+			     output_an : out STD_LOGIC_VECTOR (3 downto 0)
 			  );
 			  
 end Maquina_Refri;
@@ -142,8 +141,5 @@ Sel_Flag <= Out_ROM(16 downto 14);
 opcode_myca2 <= Out_ROM(19 downto 17);
 
 U7: deco7seg port map(clk, clr, Preco_Refri, Res_contador_74LS169, braddr_myca2(3 downto 0), '0' & opcode_myca2, output_7seg, output_an);
-
---U7: deco7seg port map(clk, clr, Res_contador_74LS169, Preco_Refri, "0000", "0000", output_7seg, output_an);
---U5: controllerFSM port map(MOEDA_ACK, MOEDA_RETIRADA, aeqbout, agtbout ,REFRI_RETIRADO, clk, clr, CLR_CONT, DEC_TROCO, RETURN_COIN, REFRI_DISPONIVEL, SOMAR, LOAD_CNT);
 
 end logic;
