@@ -1,18 +1,19 @@
 Library ieee;
 Use ieee.std_logic_1164.all;
-Use work.fulladd_package.all;
+--Use work.fulladd_package.all;
 
-component FullAdder_8bits is
+entity FullAdder_8bits is
   Port(
     A, B : in std_logic_vector(7 downto 0);
     cin : in std_logic; 
     S : out std_logic_vector(7 downto 0);
-    cout : out std_logic;
+    cout : out std_logic
     );
-end component;
+end entity;
+
+architecture somador4bit of FullAdder_8bits is
 
 component Full_adder_1BIT is
-
 port( 
   A_1b, B_1b ,Cin_1b: in STD_LOGIC;
   S_1b, Cout_1b: out STD_LOGIC);
@@ -32,4 +33,4 @@ begin
 	U6: Full_adder_1BIT port map (A(6), B(6), c6, S(6), c7);
 	U7: Full_adder_1BIT port map (A(7), B(7), c7, S(7), cout);
 
-end logic;
+end somador4bit;
