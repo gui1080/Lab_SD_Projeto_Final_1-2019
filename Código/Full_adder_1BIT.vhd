@@ -12,7 +12,8 @@ end Full_adder_1BIT;
 architecture somador_completo_F of Full_adder_1BIT is
 
 begin
-  S_1b <= (A_1b xor B_1b) xor Cin_1b;
-  Cout_1b <= (((A_1b xor B_1b) and Cin_1b) or (A_1b and B_1b);
+
+  S_1b <= ((A_1b xor B_1b) xor (Cin_1b));
+  Cout_1b <= ((A_1b xor B_1b) and Cin_1b) or (A_1b and B_1b);
   
 end somador_completo_F; 
