@@ -15,6 +15,7 @@ end shifter;
 architecture Behavioral of shifter is
 
 begin
+
   process(SHIFTINPUT,SHIFT_Ctrl, clk, clr)
     begin
     if(clk = '0') then
@@ -24,9 +25,11 @@ begin
         when "10" => SHIFTOUT <= SHIFTINPUT(7 downto 1)&R; -- Shift Right
         when others => SHIFTOUT <= "00000000";
       end case;
+      end if;
 
     if (clr = '0') then
       SHIFTOUT <= "00000000";
+      end if;
     end process;
 
 end Behavioral;
