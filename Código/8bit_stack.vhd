@@ -43,12 +43,13 @@ input_5, output_5,
 input_6, output_6,
 input_7, output_7: STD_LOGIC_VECTOR(7 downto 0);
 
-signal SHIFTINPUT: STD_LOGIC_VECTOR(7 downto 0);
-signal L, R: STD_LOGIC;
-signal SHIFT_Ctrl :STD_LOGIC_VECTOR(1 downto 0);
-signal SHIFTOUT:STD_LOGIC_VECTOR(7 downto 0);
-signal clk: std_Logic;
-signal clr:	std_Logic;
+--signal SHIFTINPUT: STD_LOGIC_VECTOR(7 downto 0);
+--signal L, R: STD_LOGIC;
+--signal SHIFT_Ctrl :STD_LOGIC_VECTOR(1 downto 0);
+--signal SHIFTOUT:STD_LOGIC_VECTOR(7 downto 0);
+--signal clk: std_Logic;
+--signal clr:	std_Logic;
+--eu realmente n entendi o pq dessa declaração
 
 begin
 
@@ -61,7 +62,7 @@ begin
   input_7(1) <= output_7(1);
   input_7(0) <= output_7(0);
 
-  R7: shifter port map(input_7, A(7), S_aux, output_7, clk, clr);
+  R7: shifter port map(input_7, output_7(0), A(7), S_aux, output_7, clk, clr);
 
   Q_aux(7) <= output_7(7);
 
@@ -76,7 +77,7 @@ begin
   input_6(1) <= output_6(1);
   input_6(0) <= output_6(0);
 
-  R6: shifter port map(input_6, A(6), S_aux, output_6, clk, clr);
+  R6: shifter port map(input_6, output_6(0), A(6), S_aux, output_6, clk, clr);
 
   Q_aux(6) <= output_6(7);
 
@@ -91,7 +92,7 @@ begin
   input_5(1) <= output_5(1);
   input_5(0) <= output_5(0);
 
-  R5: shifter port map(input_5, A(5), S_aux, output_5, clk, clr);
+  R5: shifter port map(input_5, output_5(0), A(5), S_aux, output_5, clk, clr);
 
   Q_aux(5) <= output_5(7);
 
@@ -106,7 +107,7 @@ begin
   input_4(1) <= output_4(1);
   input_4(0) <= output_4(0);
 
-  R4: shifter port map(input_4, A(4), S_aux, output_4, clk, clr);
+  R4: shifter port map(input_4, output_4(0), A(4), S_aux, output_4, clk, clr);
 
   Q_aux(4) <= output_4(7);
 
@@ -121,7 +122,7 @@ begin
   input_3(1) <= output_3(1);
   input_3(0) <= output_3(0);
 
-  R3: shifter port map(input_3, A(3), S_aux, output_3, clk, clr);
+  R3: shifter port map(input_3, output_3(0), A(3), S_aux, output_3, clk, clr);
 
   Q_aux(3) <= output_3(7);
 
@@ -136,7 +137,7 @@ begin
   input_2(1) <= output_2(1);
   input_2(0) <= output_2(0);
 
-  R2: shifter port map(input_2, A(2), S_aux, output_2, clk, clr);
+  R2: shifter port map(input_2, output_2(0), A(2), S_aux, output_2, clk, clr);
 
   Q_aux(2) <= output_2(7);
 
@@ -151,7 +152,7 @@ begin
   input_1(1) <= output_1(1);
   input_1(0) <= output_1(0);
 
-  R1: shifter port map(input_1, A(1), S_aux, output_1, clk, clr);
+  R1: shifter port map(input_1, output_1(0), A(1), S_aux, output_1, clk, clr);
 
   Q_aux(1) <= output_1(7);
 
@@ -166,7 +167,7 @@ begin
   input_0(1) <= output_0(1);
   input_0(0) <= output_0(0);
 
-  R0: shifter port map(input_0, A(0), S_aux, output_0, clk, clr);
+  R0: shifter port map(input_0, output_0(0), A(0), S_aux, output_0, clk, clr);
 
   Q_aux(0) <= output_0(7);
 
