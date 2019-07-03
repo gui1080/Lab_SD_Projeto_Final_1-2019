@@ -18,9 +18,8 @@ entity unidade_updown is
 end unidade_updown;
 
 architecture logic of unidade_updown is
-	signal temp2 : STD_LOGIC_VECTOR (8 downto 0):="000000000";
-     --esse temp2 era unsigned so que eu (gabriel moretto) mudei pra std logic pois com a mudança o código compila no eda
-	signal temp_off: STD_LOGIC;
+	 signal temp2 : unsigned (8 downto 0):="000000000";
+    signal temp_off: STD_LOGIC;
 begin
 
 off <= std_logic(temp2(8));
@@ -33,8 +32,16 @@ if clr = '0' then
 	temp2 <= "000000000";
 
 elsif lkd = '1' then
-	temp2 <= '0' & D;
-
+	temp2(8) <= '0';
+	temp2(7) <= D(7);
+	temp2(6) <= D(6);
+	temp2(5) <= D(5);
+	temp2(4) <= D(4);
+	temp2(3) <= D(3);
+	temp2(2) <= D(2);
+	temp2(1) <= D(1);
+	temp2(0) <= D(0);
+	
 elsif en = '1' and updown = '1' then
 	temp2 <= temp2+1;
 
