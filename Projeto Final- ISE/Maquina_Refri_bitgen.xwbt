@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/user/Downloads/maq_refri_mega39/Maquina_Refri.ncd
+OUTFILE=/home/user/Downloads/maq_refri_mega39/Maquina_Refri.bit
+FAMILY=Spartan3E
+PART=xc3s100e-4cp132
+WORKINGDIR=/home/user/Downloads/maq_refri_mega39
+LICENSE=WebPack
+USER_INFO=211295313_0_0_476

@@ -1,0 +1,794 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Reading design: Maquina_Refri.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Maquina_Refri.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Maquina_Refri"
+Output Format                      : NGC
+Target Device                      : xc3s100e-4-cp132
+
+---- Source Options
+Top Module Name                    : Maquina_Refri
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/shifter.vhd" in Library work.
+Architecture behavioral of Entity shifter is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/Full_adder_1BIT.vhd" in Library work.
+Architecture somador_completo_f of Entity full_adder_1bit is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/opcodeDecoder.vhd" in Library work.
+Architecture behavioral of Entity opcodedecoder is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/FullAdder_8bits.vhd" in Library work.
+Architecture somador of Entity fulladder_8bits is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/stack.vhd" in Library work.
+Architecture logic of Entity stack is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/MUX4_8.vhd" in Library work.
+Architecture mux of Entity mux4_8 is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/unidade_updown.vhd" in Library work.
+Architecture logic of Entity unidade_updown is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/comp1bit.vhd" in Library work.
+Architecture rtl of Entity comp1bit is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/decoMoeda.vhd" in Library work.
+Architecture behavioral of Entity decomoeda is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/somador_reg.vhd" in Library work.
+Architecture behavioral of Entity somador_reg is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/contador_74LS169.vhd" in Library work.
+WARNING:HDLParsers:3530 - Time stamp of file "/home/user/Downloads/PROJETO FINAL MEGA39/contador_74LS169.vhd" is newer than current system time.
+Architecture behavioral of Entity contador_74ls169 is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/comp4bit.vhd" in Library work.
+Architecture rtl of Entity comp4bit is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/flag_myca.vhd" in Library work.
+WARNING:HDLParsers:3530 - Time stamp of file "/home/user/Downloads/PROJETO FINAL MEGA39/flag_myca.vhd" is newer than current system time.
+Architecture logic of Entity flag_myca is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/myca2.vhd" in Library work.
+Architecture logic of Entity myca2 is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/ROM.vhd" in Library work.
+Architecture behav of Entity rom is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/deco7seg.vhd" in Library work.
+Architecture behavioral of Entity deco7seg is up to date.
+Compiling vhdl file "/home/user/Downloads/PROJETO FINAL MEGA39/Maquina_Refri.vhd" in Library work.
+Architecture logic of Entity maquina_refri is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Maquina_Refri> in library <work> (architecture <logic>).
+
+Analyzing hierarchy for entity <decoMoeda> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <somador_reg> in library <work> (architecture <behavioral>) with generics.
+	n = 4
+
+Analyzing hierarchy for entity <contador_74LS169> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <comp4bit> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <flag_myca> in library <work> (architecture <logic>).
+
+Analyzing hierarchy for entity <myca2> in library <work> (architecture <logic>).
+
+Analyzing hierarchy for entity <ROM> in library <work> (architecture <behav>).
+
+Analyzing hierarchy for entity <deco7seg> in library <work> (architecture <behavioral>) with generics.
+	clk_freq = 100000000
+	refresh_freq = 30
+
+Analyzing hierarchy for entity <comp1bit> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <opcodeDecoder> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <FullAdder_8bits> in library <work> (architecture <somador>).
+
+Analyzing hierarchy for entity <stack> in library <work> (architecture <logic>).
+
+Analyzing hierarchy for entity <MUX4_8> in library <work> (architecture <mux>).
+
+Analyzing hierarchy for entity <unidade_updown> in library <work> (architecture <logic>).
+
+Analyzing hierarchy for entity <Full_adder_1BIT> in library <work> (architecture <somador_completo_f>).
+
+Analyzing hierarchy for entity <shifter> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Maquina_Refri> in library <work> (Architecture <logic>).
+Entity <Maquina_Refri> analyzed. Unit <Maquina_Refri> generated.
+
+Analyzing Entity <decoMoeda> in library <work> (Architecture <behavioral>).
+Entity <decoMoeda> analyzed. Unit <decoMoeda> generated.
+
+Analyzing generic Entity <somador_reg> in library <work> (Architecture <behavioral>).
+	n = 4
+Entity <somador_reg> analyzed. Unit <somador_reg> generated.
+
+Analyzing Entity <contador_74LS169> in library <work> (Architecture <behavioral>).
+Entity <contador_74LS169> analyzed. Unit <contador_74LS169> generated.
+
+Analyzing Entity <comp4bit> in library <work> (Architecture <rtl>).
+Entity <comp4bit> analyzed. Unit <comp4bit> generated.
+
+Analyzing Entity <comp1bit> in library <work> (Architecture <rtl>).
+Entity <comp1bit> analyzed. Unit <comp1bit> generated.
+
+Analyzing Entity <flag_myca> in library <work> (Architecture <logic>).
+Entity <flag_myca> analyzed. Unit <flag_myca> generated.
+
+Analyzing Entity <myca2> in library <work> (Architecture <logic>).
+Entity <myca2> analyzed. Unit <myca2> generated.
+
+Analyzing Entity <opcodeDecoder> in library <work> (Architecture <behavioral>).
+Entity <opcodeDecoder> analyzed. Unit <opcodeDecoder> generated.
+
+Analyzing Entity <FullAdder_8bits> in library <work> (Architecture <somador>).
+Entity <FullAdder_8bits> analyzed. Unit <FullAdder_8bits> generated.
+
+Analyzing Entity <Full_adder_1BIT> in library <work> (Architecture <somador_completo_f>).
+Entity <Full_adder_1BIT> analyzed. Unit <Full_adder_1BIT> generated.
+
+Analyzing Entity <stack> in library <work> (Architecture <logic>).
+Entity <stack> analyzed. Unit <stack> generated.
+
+Analyzing Entity <shifter> in library <work> (Architecture <behavioral>).
+WARNING:Xst:819 - "/home/user/Downloads/PROJETO FINAL MEGA39/shifter.vhd" line 19: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <L>, <R>
+Entity <shifter> analyzed. Unit <shifter> generated.
+
+Analyzing Entity <MUX4_8> in library <work> (Architecture <mux>).
+Entity <MUX4_8> analyzed. Unit <MUX4_8> generated.
+
+Analyzing Entity <unidade_updown> in library <work> (Architecture <logic>).
+WARNING:Xst:819 - "/home/user/Downloads/PROJETO FINAL MEGA39/unidade_updown.vhd" line 27: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <temp2>
+Entity <unidade_updown> analyzed. Unit <unidade_updown> generated.
+
+Analyzing Entity <ROM> in library <work> (Architecture <behav>).
+Entity <ROM> analyzed. Unit <ROM> generated.
+
+Analyzing generic Entity <deco7seg> in library <work> (Architecture <behavioral>).
+	clk_freq = 100000000
+	refresh_freq = 30
+INFO:Xst:1561 - "/home/user/Downloads/PROJETO FINAL MEGA39/deco7seg.vhd" line 49: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "/home/user/Downloads/PROJETO FINAL MEGA39/deco7seg.vhd" line 83: Mux is complete : default of case is discarded
+Entity <deco7seg> analyzed. Unit <deco7seg> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <decoMoeda>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/decoMoeda.vhd".
+    Found 4x4-bit ROM for signal <DECOIN_OUT>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <decoMoeda> synthesized.
+
+
+Synthesizing Unit <somador_reg>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/somador_reg.vhd".
+    Found 4-bit register for signal <S>.
+    Found 4-bit register for signal <s_var>.
+    Found 4-bit adder for signal <s_var$addsub0000> created at line 31.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <somador_reg> synthesized.
+
+
+Synthesizing Unit <contador_74LS169>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/contador_74LS169.vhd".
+    Found 1-bit register for signal <o_f>.
+    Found 4-bit register for signal <Q>.
+    Found 4-bit register for signal <Q_var>.
+    Found 4-bit subtractor for signal <Q_var$addsub0000> created at line 32.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <contador_74LS169> synthesized.
+
+
+Synthesizing Unit <flag_myca>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/flag_myca.vhd".
+    Found 1-bit 8-to-1 multiplexer for signal <S_M>.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <flag_myca> synthesized.
+
+
+Synthesizing Unit <ROM>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/ROM.vhd".
+    Found 16x20-bit ROM for signal <d_out$mux0000>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <ROM> synthesized.
+
+
+Synthesizing Unit <deco7seg>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/deco7seg.vhd".
+WARNING:Xst:1780 - Signal <AN_ABCD> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 16x7-bit ROM for signal <LED_out>.
+    Found 1-of-4 decoder for signal <output_an>.
+    Found 2-bit up counter for signal <an_cont>.
+    Found 32-bit comparator greatequal for signal <an_cont$cmp_ge0000> created at line 64.
+    Found 4-bit 4-to-1 multiplexer for signal <LED_ABCD>.
+    Found 32-bit up counter for signal <refresh_counter>.
+    Found 32-bit adder for signal <refresh_counter$add0000> created at line 63.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Decoder(s).
+Unit <deco7seg> synthesized.
+
+
+Synthesizing Unit <comp1bit>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/comp1bit.vhd".
+    Found 1-bit xor2 for signal <eq$xor0000> created at line 14.
+Unit <comp1bit> synthesized.
+
+
+Synthesizing Unit <opcodeDecoder>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/opcodeDecoder.vhd".
+    Found 16x7-bit ROM for signal <deco_out>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <opcodeDecoder> synthesized.
+
+
+Synthesizing Unit <MUX4_8>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/MUX4_8.vhd".
+    Found 8-bit 4-to-1 multiplexer for signal <Y1>.
+    Summary:
+	inferred   8 Multiplexer(s).
+Unit <MUX4_8> synthesized.
+
+
+Synthesizing Unit <unidade_updown>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/unidade_updown.vhd".
+WARNING:Xst:1780 - Signal <temp_off> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 9-bit register for signal <temp2>.
+    Found 9-bit adder for signal <temp2$add0000> created at line 46.
+    Found 9-bit subtractor for signal <temp2$sub0000> created at line 49.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <unidade_updown> synthesized.
+
+
+Synthesizing Unit <Full_adder_1BIT>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/Full_adder_1BIT.vhd".
+    Found 1-bit xor2 for signal <S_1b>.
+    Found 1-bit xor2 for signal <Cout_1b$xor0000> created at line 17.
+Unit <Full_adder_1BIT> synthesized.
+
+
+Synthesizing Unit <shifter>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/shifter.vhd".
+WARNING:Xst:737 - Found 8-bit latch for signal <SHIFTOUT>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit 4-to-1 multiplexer for signal <SHIFTOUT$mux0002> created at line 22.
+    Summary:
+	inferred   8 Multiplexer(s).
+Unit <shifter> synthesized.
+
+
+Synthesizing Unit <comp4bit>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/comp4bit.vhd".
+Unit <comp4bit> synthesized.
+
+
+Synthesizing Unit <FullAdder_8bits>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/FullAdder_8bits.vhd".
+Unit <FullAdder_8bits> synthesized.
+
+
+Synthesizing Unit <stack>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/stack.vhd".
+WARNING:Xst:647 - Input <clr_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk_2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <clr> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <clk> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <stack> synthesized.
+
+
+Synthesizing Unit <myca2>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/myca2.vhd".
+WARNING:Xst:647 - Input <opcode<3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <off_f> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <entrada_mux> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Cout_Full_Adder> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <myca2> synthesized.
+
+
+Synthesizing Unit <Maquina_Refri>.
+    Related source file is "/home/user/Downloads/PROJETO FINAL MEGA39/Maquina_Refri.vhd".
+WARNING:Xst:653 - Signal <opcode_myca2<3>> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <o_f> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <Maquina_Refri> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 4
+ 16x20-bit ROM                                         : 1
+ 16x7-bit ROM                                          : 2
+ 4x4-bit ROM                                           : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 2
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 14
+ 1-bit register                                        : 10
+ 4-bit register                                        : 4
+# Latches                                              : 8
+ 8-bit latch                                           : 8
+# Comparators                                          : 1
+ 32-bit comparator greatequal                          : 1
+# Multiplexers                                         : 11
+ 1-bit 8-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 9
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+# Xors                                                 : 20
+ 1-bit xor2                                            : 20
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <s_var_0> in Unit <U1> is equivalent to the following FF/Latch, which will be removed : <S_0> 
+INFO:Xst:2261 - The FF/Latch <s_var_1> in Unit <U1> is equivalent to the following FF/Latch, which will be removed : <S_1> 
+INFO:Xst:2261 - The FF/Latch <s_var_2> in Unit <U1> is equivalent to the following FF/Latch, which will be removed : <S_2> 
+INFO:Xst:2261 - The FF/Latch <s_var_3> in Unit <U1> is equivalent to the following FF/Latch, which will be removed : <S_3> 
+INFO:Xst:2261 - The FF/Latch <Q_var_0> in Unit <U2> is equivalent to the following FF/Latch, which will be removed : <Q_0> 
+INFO:Xst:2261 - The FF/Latch <Q_var_1> in Unit <U2> is equivalent to the following FF/Latch, which will be removed : <Q_1> 
+INFO:Xst:2261 - The FF/Latch <Q_var_2> in Unit <U2> is equivalent to the following FF/Latch, which will be removed : <Q_2> 
+INFO:Xst:2261 - The FF/Latch <Q_var_3> in Unit <U2> is equivalent to the following FF/Latch, which will be removed : <Q_3> 
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 4
+ 16x20-bit ROM                                         : 1
+ 16x7-bit ROM                                          : 2
+ 4x4-bit ROM                                           : 1
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 2
+ 2-bit up counter                                      : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 26
+ Flip-Flops                                            : 26
+# Latches                                              : 8
+ 8-bit latch                                           : 8
+# Comparators                                          : 1
+ 32-bit comparator greatequal                          : 1
+# Multiplexers                                         : 11
+ 1-bit 8-to-1 multiplexer                              : 1
+ 4-bit 4-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 9
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+# Xors                                                 : 20
+ 1-bit xor2                                            : 20
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <s_var_0> in Unit <somador_reg> is equivalent to the following FF/Latch, which will be removed : <S_0> 
+INFO:Xst:2261 - The FF/Latch <s_var_1> in Unit <somador_reg> is equivalent to the following FF/Latch, which will be removed : <S_1> 
+INFO:Xst:2261 - The FF/Latch <s_var_2> in Unit <somador_reg> is equivalent to the following FF/Latch, which will be removed : <S_2> 
+INFO:Xst:2261 - The FF/Latch <s_var_3> in Unit <somador_reg> is equivalent to the following FF/Latch, which will be removed : <S_3> 
+INFO:Xst:2261 - The FF/Latch <Q_var_0> in Unit <contador_74LS169> is equivalent to the following FF/Latch, which will be removed : <Q_0> 
+INFO:Xst:2261 - The FF/Latch <Q_var_1> in Unit <contador_74LS169> is equivalent to the following FF/Latch, which will be removed : <Q_1> 
+INFO:Xst:2261 - The FF/Latch <Q_var_2> in Unit <contador_74LS169> is equivalent to the following FF/Latch, which will be removed : <Q_2> 
+INFO:Xst:2261 - The FF/Latch <Q_var_3> in Unit <contador_74LS169> is equivalent to the following FF/Latch, which will be removed : <Q_3> 
+WARNING:Xst:2677 - Node <R7/SHIFTOUT_1> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R7/SHIFTOUT_2> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R7/SHIFTOUT_3> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R7/SHIFTOUT_4> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R7/SHIFTOUT_5> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R7/SHIFTOUT_6> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R6/SHIFTOUT_1> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R6/SHIFTOUT_2> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R6/SHIFTOUT_3> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R6/SHIFTOUT_4> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R6/SHIFTOUT_5> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R6/SHIFTOUT_6> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R5/SHIFTOUT_1> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R5/SHIFTOUT_2> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R5/SHIFTOUT_3> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R5/SHIFTOUT_4> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R5/SHIFTOUT_5> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R5/SHIFTOUT_6> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R4/SHIFTOUT_1> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R4/SHIFTOUT_2> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R4/SHIFTOUT_3> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R4/SHIFTOUT_4> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R4/SHIFTOUT_5> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R4/SHIFTOUT_6> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R3/SHIFTOUT_1> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R3/SHIFTOUT_2> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R3/SHIFTOUT_3> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R3/SHIFTOUT_4> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R3/SHIFTOUT_5> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R3/SHIFTOUT_6> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R2/SHIFTOUT_1> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R2/SHIFTOUT_2> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R2/SHIFTOUT_3> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R2/SHIFTOUT_4> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R2/SHIFTOUT_5> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R2/SHIFTOUT_6> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R1/SHIFTOUT_1> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R1/SHIFTOUT_2> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R1/SHIFTOUT_3> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R1/SHIFTOUT_4> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R1/SHIFTOUT_5> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R1/SHIFTOUT_6> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R0/SHIFTOUT_1> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R0/SHIFTOUT_2> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R0/SHIFTOUT_3> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R0/SHIFTOUT_4> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R0/SHIFTOUT_5> of sequential type is unconnected in block <stack>.
+WARNING:Xst:2677 - Node <R0/SHIFTOUT_6> of sequential type is unconnected in block <stack>.
+
+Optimizing unit <Maquina_Refri> ...
+
+Optimizing unit <somador_reg> ...
+
+Optimizing unit <contador_74LS169> ...
+
+Optimizing unit <deco7seg> ...
+
+Optimizing unit <unidade_updown> ...
+
+Optimizing unit <FullAdder_8bits> ...
+
+Optimizing unit <stack> ...
+WARNING:Xst:2677 - Node <U2/o_f> of sequential type is unconnected in block <Maquina_Refri>.
+WARNING:Xst:2677 - Node <U5/U4/temp2_8> of sequential type is unconnected in block <Maquina_Refri>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Maquina_Refri, actual ratio is 12.
+FlipFlop U5/U4/temp2_2 has been replicated 1 time(s)
+FlipFlop U5/U4/temp2_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 52
+ Flip-Flops                                            : 52
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Maquina_Refri.ngr
+Top Level Output File Name         : Maquina_Refri
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 392
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 72
+#      LUT2                        : 21
+#      LUT2_D                      : 2
+#      LUT2_L                      : 7
+#      LUT3                        : 24
+#      LUT3_D                      : 1
+#      LUT3_L                      : 3
+#      LUT4                        : 67
+#      LUT4_D                      : 6
+#      LUT4_L                      : 7
+#      MUXCY                       : 86
+#      MUXF5                       : 11
+#      MUXF6                       : 1
+#      VCC                         : 1
+#      XORCY                       : 72
+# FlipFlops/Latches                : 68
+#      FD                          : 4
+#      FDR                         : 33
+#      FDRE                        : 15
+#      LDC_1                       : 8
+#      LDCE_1                      : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 6
+#      OBUF                        : 13
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-4 
+
+ Number of Slices:                      115  out of    960    11%  
+ Number of Slice Flip Flops:             68  out of   1920     3%  
+ Number of 4 input LUTs:                220  out of   1920    11%  
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of     83    24%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)    | Load  |
+-----------------------------------+--------------------------+-------+
+clk                                | BUFGP                    | 52    |
+N0                                 | NONE(U5/U2/R0/SHIFTOUT_7)| 16    |
+-----------------------------------+--------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+--------------------------+-------+
+Control Signal                     | Buffer(FF name)          | Load  |
+-----------------------------------+--------------------------+-------+
+N1(XST_VCC:P)                      | NONE(U5/U2/R0/SHIFTOUT_0)| 16    |
+-----------------------------------+--------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 12.044ns (Maximum Frequency: 83.027MHz)
+   Minimum input arrival time before clock: 9.807ns
+   Maximum output required time after clock: 11.489ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 12.044ns (frequency: 83.027MHz)
+  Total number of paths / destination ports: 26751 / 100
+-------------------------------------------------------------------------
+Delay:               12.044ns (Levels of Logic = 9)
+  Source:            U5/U4/temp2_1 (FF)
+  Destination:       U5/U4/temp2_6 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: U5/U4/temp2_1 to U5/U4/temp2_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            25   0.591   1.295  U5/U4/temp2_1 (U5/U4/temp2_1)
+     LUT4:I2->O            1   0.704   0.595  U6/d_out<15>_SW0 (N68)
+     LUT2:I0->O            2   0.704   0.447  U6/d_out<15> (Out_ROM<15>)
+     MUXF5:S->O            1   0.739   0.000  U4/Mmux_S_M_3_f5 (U4/Mmux_S_M_3_f5)
+     MUXF6:I1->O          26   0.521   1.295  U4/Mmux_S_M_2_f6 (Out_Flag)
+     LUT3:I2->O            8   0.704   0.757  U5/U3/Mmux_Y11236_1 (U5/U3/Mmux_Y11236)
+     LDCE_1:GE->Q          1   0.676   0.424  U5/U2/R7/SHIFTOUT_0 (U5/U2/R7/SHIFTOUT_0)
+     LUT4:I3->O            1   0.704   0.000  U5/U2/R7/Mmux_SHIFTOUT_mux000291 (U5/U2/R7/SHIFTOUT_mux0002<7>)
+     LDC_1:D->Q            1   0.452   0.424  U5/U2/R7/SHIFTOUT_7 (U5/U2/R7/SHIFTOUT_7)
+     LUT4:I3->O            1   0.704   0.000  U5/U4/temp2_7_mux0000 (U5/U4/temp2_7_mux0000)
+     FDRE:D                    0.308          U5/U4/temp2_7
+    ----------------------------------------
+    Total                     12.044ns (6.807ns logic, 5.237ns route)
+                                       (56.5% logic, 43.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 359 / 75
+-------------------------------------------------------------------------
+Offset:              9.807ns (Levels of Logic = 9)
+  Source:            MOEDA_ACK (PAD)
+  Destination:       U5/U4/temp2_6 (FF)
+  Destination Clock: clk rising
+
+  Data Path: MOEDA_ACK to U5/U4/temp2_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.595  MOEDA_ACK_IBUF (MOEDA_ACK_IBUF)
+     LUT3:I0->O            1   0.704   0.000  U4/Mmux_S_M_6 (U4/Mmux_S_M_6)
+     MUXF5:I0->O           1   0.321   0.000  U4/Mmux_S_M_4_f5 (U4/Mmux_S_M_4_f5)
+     MUXF6:I0->O          26   0.521   1.295  U4/Mmux_S_M_2_f6 (Out_Flag)
+     LUT3:I2->O            8   0.704   0.757  U5/U3/Mmux_Y11236_1 (U5/U3/Mmux_Y11236)
+     LDCE_1:GE->Q          1   0.676   0.424  U5/U2/R7/SHIFTOUT_0 (U5/U2/R7/SHIFTOUT_0)
+     LUT4:I3->O            1   0.704   0.000  U5/U2/R7/Mmux_SHIFTOUT_mux000291 (U5/U2/R7/SHIFTOUT_mux0002<7>)
+     LDC_1:D->Q            1   0.452   0.424  U5/U2/R7/SHIFTOUT_7 (U5/U2/R7/SHIFTOUT_7)
+     LUT4:I3->O            1   0.704   0.000  U5/U4/temp2_7_mux0000 (U5/U4/temp2_7_mux0000)
+     FDRE:D                    0.308          U5/U4/temp2_7
+    ----------------------------------------
+    Total                      9.807ns (6.312ns logic, 3.495ns route)
+                                       (64.4% logic, 35.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 406 / 13
+-------------------------------------------------------------------------
+Offset:              11.489ns (Levels of Logic = 7)
+  Source:            U5/U4/temp2_7 (FF)
+  Destination:       output_7seg<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: U5/U4/temp2_7 to output_7seg<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.591   0.808  U5/U4/temp2_7 (U5/U4/temp2_7)
+     LUT4_D:I0->O         14   0.704   1.004  U6/d_out<15>11 (N6)
+     LUT4_D:I3->LO         1   0.704   0.104  U5/U0/Mrom_deco_out3 (N173)
+     LUT4:I3->O            3   0.704   0.566  U6/d_out<17>1 (Out_ROM<17>)
+     LUT3:I2->O            1   0.704   0.000  U7/Mmux_LED_ABCD21 (U7/Mmux_LED_ABCD2)
+     MUXF5:I1->O           7   0.321   0.883  U7/Mmux_LED_ABCD2_f5 (U7/LED_ABCD<0>)
+     LUT4:I0->O            1   0.704   0.420  U7/Mrom_LED_out51 (output_7seg_5_OBUF)
+     OBUF:I->O                 3.272          output_7seg_5_OBUF (output_7seg<5>)
+    ----------------------------------------
+    Total                     11.489ns (7.704ns logic, 3.785ns route)
+                                       (67.1% logic, 32.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.37 secs
+ 
+--> 
+
+
+Total memory usage is 507464 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   67 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
+

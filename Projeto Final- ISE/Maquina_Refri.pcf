@@ -1,0 +1,28 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Wed Jul 03 17:38:38 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "MOEDA_ACK" LOCATE = SITE "G12" LEVEL 1;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "RETURN_COIN" LOCATE = SITE "M11" LEVEL 1;
+COMP "COIN<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "clr" LOCATE = SITE "A7" LEVEL 1;
+COMP "COIN<1>" LOCATE = SITE "L3" LEVEL 1;
+COMP "output_7seg<0>" LOCATE = SITE "M12" LEVEL 1;
+COMP "REFRI_DISPONIVEL" LOCATE = SITE "M5" LEVEL 1;
+COMP "output_7seg<1>" LOCATE = SITE "L13" LEVEL 1;
+COMP "output_7seg<2>" LOCATE = SITE "P12" LEVEL 1;
+COMP "output_7seg<3>" LOCATE = SITE "N11" LEVEL 1;
+COMP "output_7seg<4>" LOCATE = SITE "N14" LEVEL 1;
+COMP "output_7seg<5>" LOCATE = SITE "H12" LEVEL 1;
+COMP "output_7seg<6>" LOCATE = SITE "L14" LEVEL 1;
+COMP "output_an<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "output_an<1>" LOCATE = SITE "J12" LEVEL 1;
+COMP "REFRI_RETIRADO" LOCATE = SITE "M4" LEVEL 1;
+COMP "output_an<2>" LOCATE = SITE "M13" LEVEL 1;
+COMP "output_an<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "MOEDA_RETIRADA" LOCATE = SITE "C11" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

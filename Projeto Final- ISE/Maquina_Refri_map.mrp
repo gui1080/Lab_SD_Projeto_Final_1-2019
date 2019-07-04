@@ -1,0 +1,299 @@
+Release 14.7 Map P.20131013 (lin64)
+Xilinx Mapping Report File for Design 'Maquina_Refri'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off
+-c 100 -o Maquina_Refri_map.ncd Maquina_Refri.ngd Maquina_Refri.pcf 
+Target Device  : xc3s100e
+Target Package : cp132
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Wed Jul  3 17:38:35 2019
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:            52 out of   1,920    2%
+  Number of 4 input LUTs:                94 out of   1,920    4%
+Logic Distribution:
+  Number of occupied Slices:             88 out of     960    9%
+    Number of Slices containing only related logic:      88 out of      88 100%
+    Number of Slices containing unrelated logic:          0 out of      88   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         166 out of   1,920    8%
+    Number used as logic:                94
+    Number used as a route-thru:         72
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 20 out of      83   24%
+  Number of BUFGMUXs:                     1 out of      24    4%
+
+Average Fanout of Non-Clock Nets:                2.61
+
+Peak Memory Usage:  554 MB
+Total REAL time to MAP completion:  4 secs 
+Total CPU time to MAP completion:   3 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  52 block(s) removed
+  10 block(s) optimized away
+  52 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "N138" is unused and has been removed.
+ Unused block "U5/U1/U3/Mxor_S_1b_Result11_SW1" (ROM) removed.
+The signal "N140" is unused and has been removed.
+ Unused block "U5/U1/U3/Mxor_S_1b_Result11_SW2" (ROM) removed.
+The signal "N142" is unused and has been removed.
+ Unused block "U5/U1/U3/Mxor_S_1b_Result11_SW3_f5" (MUX) removed.
+  The signal "U5/U1/U3/Mxor_S_1b_Result11_SW3" is unused and has been removed.
+   Unused block "U5/U1/U3/Mxor_S_1b_Result11_SW31" (ROM) removed.
+The signal "N144" is unused and has been removed.
+ Unused block "U5/U1/U3/Mxor_S_1b_Result11_SW4" (ROM) removed.
+The signal "N146" is unused and has been removed.
+ Unused block "U5/U1/U3/Mxor_S_1b_Result11_SW5" (ROM) removed.
+The signal "N66" is unused and has been removed.
+ Unused block "U5/U4/temp2_0_mux0000_SW1" (ROM) removed.
+The signal "N93" is unused and has been removed.
+ Unused block "U5/U1/U3/Mxor_S_1b_Result11_SW0" (ROM) removed.
+The signal "U5/Out_FullAdder<3>" is unused and has been removed.
+ Unused block "U5/U1/U3/Mxor_S_1b_Result2" (ROM) removed.
+The signal "U5/Out_FullAdder<4>" is unused and has been removed.
+ Unused block "U5/U1/U4/Mxor_S_1b_Result1" (ROM) removed.
+The signal "U5/U0/Mrom_deco_out" is unused and has been removed.
+ Unused block "U5/U0/Mrom_deco_out1" (ROM) removed.
+The signal "U5/U0/Mrom_deco_out2" is unused and has been removed.
+ Unused block "U5/U3/Mmux_Y11236" (ROM) removed.
+  The signal "U5/U3/Mmux_Y11223" is unused and has been removed.
+   Unused block "U5/U3/Mmux_Y11223" (ROM) removed.
+  The signal "U5/U3/Mmux_Y11210" is unused and has been removed.
+   Unused block "U5/U3/Mmux_Y11210" (ROM) removed.
+The signal "U5/U2/R0/Mmux_SHIFTOUT_mux000211" is unused and has been removed.
+ Unused block "U5/U2/R0/Mmux_SHIFTOUT_mux0002111" (ROM) removed.
+The signal "U5/U2/R0/SHIFTOUT<0>" is unused and has been removed.
+ Unused block "U5/U2/R0/SHIFTOUT_0" (LATCH) removed.
+  The signal "U5/U3/Mmux_Y11236" is unused and has been removed.
+   Unused block "U5/U3/Mmux_Y11236_1" (ROM) removed.
+The signal "U5/U2/R0/SHIFTOUT_mux0002<7>" is unused and has been removed.
+ Unused block "U5/U2/R0/Mmux_SHIFTOUT_mux000291" (ROM) removed.
+The signal "U5/U2/R1/Mmux_SHIFTOUT_mux000211" is unused and has been removed.
+ Unused block "U5/U2/R1/Mmux_SHIFTOUT_mux0002111" (ROM) removed.
+The signal "U5/U2/R1/SHIFTOUT<0>" is unused and has been removed.
+ Unused block "U5/U2/R1/SHIFTOUT_0" (LATCH) removed.
+The signal "U5/U2/R1/SHIFTOUT_mux0002<7>" is unused and has been removed.
+ Unused block "U5/U2/R1/Mmux_SHIFTOUT_mux000291" (ROM) removed.
+The signal "U5/U2/R2/Mmux_SHIFTOUT_mux000211" is unused and has been removed.
+ Unused block "U5/U2/R2/Mmux_SHIFTOUT_mux0002111" (ROM) removed.
+The signal "U5/U2/R2/SHIFTOUT<0>" is unused and has been removed.
+ Unused block "U5/U2/R2/SHIFTOUT_0" (LATCH) removed.
+The signal "U5/U2/R2/SHIFTOUT_mux0002<7>" is unused and has been removed.
+ Unused block "U5/U2/R2/Mmux_SHIFTOUT_mux000291" (ROM) removed.
+The signal "U5/U2/R3/Mmux_SHIFTOUT_mux000211" is unused and has been removed.
+ Unused block "U5/U2/R3/Mmux_SHIFTOUT_mux0002111" (ROM) removed.
+The signal "U5/U2/R3/SHIFTOUT<0>" is unused and has been removed.
+ Unused block "U5/U2/R3/SHIFTOUT_0" (LATCH) removed.
+The signal "U5/U2/R3/SHIFTOUT_mux0002<7>" is unused and has been removed.
+ Unused block "U5/U2/R3/Mmux_SHIFTOUT_mux000291" (ROM) removed.
+The signal "U5/U2/R4/Mmux_SHIFTOUT_mux000211" is unused and has been removed.
+ Unused block "U5/U2/R4/Mmux_SHIFTOUT_mux0002111" (ROM) removed.
+The signal "U5/U2/R4/SHIFTOUT<0>" is unused and has been removed.
+ Unused block "U5/U2/R4/SHIFTOUT_0" (LATCH) removed.
+The signal "U5/U2/R4/SHIFTOUT_mux0002<7>" is unused and has been removed.
+ Unused block "U5/U2/R4/Mmux_SHIFTOUT_mux000291" (ROM) removed.
+The signal "U5/U2/R5/Mmux_SHIFTOUT_mux000211" is unused and has been removed.
+ Unused block "U5/U2/R5/Mmux_SHIFTOUT_mux0002111" (ROM) removed.
+The signal "U5/U2/R5/SHIFTOUT<0>" is unused and has been removed.
+ Unused block "U5/U2/R5/SHIFTOUT_0" (LATCH) removed.
+The signal "U5/U2/R5/SHIFTOUT_mux0002<7>" is unused and has been removed.
+ Unused block "U5/U2/R5/Mmux_SHIFTOUT_mux000291" (ROM) removed.
+The signal "U5/U2/R6/Mmux_SHIFTOUT_mux000211" is unused and has been removed.
+ Unused block "U5/U2/R6/Mmux_SHIFTOUT_mux0002111" (ROM) removed.
+The signal "U5/U2/R6/SHIFTOUT<0>" is unused and has been removed.
+ Unused block "U5/U2/R6/SHIFTOUT_0" (LATCH) removed.
+The signal "U5/U2/R6/SHIFTOUT_mux0002<7>" is unused and has been removed.
+ Unused block "U5/U2/R6/Mmux_SHIFTOUT_mux000291" (ROM) removed.
+The signal "U5/U2/R7/Mmux_SHIFTOUT_mux000211" is unused and has been removed.
+ Unused block "U5/U2/R7/Mmux_SHIFTOUT_mux0002111" (ROM) removed.
+The signal "U5/U2/R7/SHIFTOUT<0>" is unused and has been removed.
+ Unused block "U5/U2/R7/SHIFTOUT_0" (LATCH) removed.
+The signal "U5/U2/R7/SHIFTOUT_mux0002<7>" is unused and has been removed.
+ Unused block "U5/U2/R7/Mmux_SHIFTOUT_mux000291" (ROM) removed.
+The signal "U5/U4/temp2_4_mux0000_SW1/O" is unused and has been removed.
+ Unused block "U5/U4/temp2_4_mux0000_SW1" (ROM) removed.
+The signal "U5/U4/temp2_3_mux0000_SW1/O" is unused and has been removed.
+ Unused block "U5/U4/temp2_3_mux0000_SW1" (ROM) removed.
+The signal "U5/U4/temp2_7_mux0000_SW1/O" is unused and has been removed.
+ Unused block "U5/U4/temp2_7_mux0000_SW1" (ROM) removed.
+The signal "U5/U4/temp2_6_mux0000_SW1/O" is unused and has been removed.
+ Unused block "U5/U4/temp2_6_mux0000_SW1" (ROM) removed.
+The signal "U5/U4/temp2_5_mux0000_SW1/O" is unused and has been removed.
+ Unused block "U5/U4/temp2_5_mux0000_SW1" (ROM) removed.
+The signal "U5/U1/U2/Mxor_S_1b_Result1/O" is unused and has been removed.
+ Unused block "U5/U1/U2/Mxor_S_1b_Result1" (ROM) removed.
+The signal "U5/U4/temp2_1_mux000025_SW1/O" is unused and has been removed.
+ Unused block "U5/U4/temp2_1_mux000025_SW1" (ROM) removed.
+The signal "U5/U4/temp2_2_mux000025_SW1/O" is unused and has been removed.
+ Unused block "U5/U4/temp2_2_mux000025_SW1" (ROM) removed.
+The signal "U5/U1/U5/Mxor_S_1b_Result11_SW1/O" is unused and has been removed.
+ Unused block "U5/U1/U5/Mxor_S_1b_Result11_SW1" (ROM) removed.
+The signal "U5/U1/U5/Mxor_S_1b_Result11_SW2/O" is unused and has been removed.
+ Unused block "U5/U1/U5/Mxor_S_1b_Result11_SW2" (ROM) removed.
+The signal "U5/U1/U5/Mxor_S_1b_Result2/O" is unused and has been removed.
+ Unused block "U5/U1/U5/Mxor_S_1b_Result2" (ROM) removed.
+The signal "U5/U1/U6/Mxor_S_1b_Result1/O" is unused and has been removed.
+ Unused block "U5/U1/U6/Mxor_S_1b_Result1" (ROM) removed.
+The signal "U5/U1/U7/Mxor_S_1b_Result1/O" is unused and has been removed.
+ Unused block "U5/U1/U7/Mxor_S_1b_Result1" (ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+LDC_1 		U5/U2/R0/SHIFTOUT_7
+   optimized to 0
+LDC_1 		U5/U2/R1/SHIFTOUT_7
+   optimized to 0
+LDC_1 		U5/U2/R2/SHIFTOUT_7
+   optimized to 0
+LDC_1 		U5/U2/R3/SHIFTOUT_7
+   optimized to 0
+LDC_1 		U5/U2/R4/SHIFTOUT_7
+   optimized to 0
+LDC_1 		U5/U2/R5/SHIFTOUT_7
+   optimized to 0
+LDC_1 		U5/U2/R6/SHIFTOUT_7
+   optimized to 0
+LDC_1 		U5/U2/R7/SHIFTOUT_7
+   optimized to 0
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| COIN<0>                            | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| COIN<1>                            | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| MOEDA_ACK                          | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| MOEDA_RETIRADA                     | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| REFRI_DISPONIVEL                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| REFRI_RETIRADO                     | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| RETURN_COIN                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| clk                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| clr                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| output_7seg<0>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| output_7seg<1>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| output_7seg<2>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| output_7seg<3>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| output_7seg<4>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| output_7seg<5>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| output_7seg<6>                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| output_an<0>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| output_an<1>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| output_an<2>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| output_an<3>                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

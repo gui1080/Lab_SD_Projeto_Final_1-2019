@@ -1,0 +1,13 @@
+Release 14.7 Drc P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Wed Jul  3 17:33:39 2019
+
+drc -z Maquina_Refri.ncd Maquina_Refri.pcf
+
+WARNING:PhysDesignRules:367 - The signal <REFRI_RETIRADO_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <MOEDA_RETIRADA_IBUF> is incomplete.
+   The signal does not drive any load pins in the design.
+DRC detected 0 errors and 2 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
