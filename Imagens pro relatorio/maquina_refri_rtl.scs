@@ -1,0 +1,16 @@
+<palette preferredColorScheme="dark">
+  <entry type="NewObject" role="Block" dark="#FFFF00" light="#800080" print="#800080"/>
+  <entry type="NewObject" role="Signal" dark="#FFFF00" light="#800080" print="#800080"/>
+  <entry type="NewObject" role="Port" dark="#FFFF00" light="#800080" print="#800080"/>
+  <entry type="Default" role="Background" dark="#000000" light="#FFFFFF" print="#FFFFFF"/>
+  <entry type="Default" role="Border" dark="#808080" light="#808080" print="#808080"/>
+  <entry type="Default" role="Selection" dark="#00FFFF" light="#FF0000" print="#FF0000"/>
+  <entry type="Default" role="Block" dark="#00FF00" light="#0000FF" print="#0000FF"/>
+  <entry type="Default" role="BlockFill" dark="#000000" light="#FFFFFF" print="#FFFFFF"/>
+  <entry type="Default" role="HierBlock" dark="#00FF00" light="#0000FF" print="#0000FF"/>
+  <entry type="Default" role="HierBlockFill" dark="#000000" light="#FFFFFF" print="#FFFFFF"/>
+  <entry type="Default" role="Signal" dark="#FF0000" light="#808000" print="#808000"/>
+  <entry type="Default" role="Bus" dark="#FF0000" light="#808000" print="#808000"/>
+  <entry type="Default" role="Bustap" dark="#FF0000" light="#808000" print="#808000"/>
+  <entry type="Default" role="Port" dark="#00FF00" light="#0000FF" print="#0000FF"/>
+</palette>

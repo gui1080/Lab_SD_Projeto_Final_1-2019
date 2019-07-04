@@ -1,0 +1,26 @@
+NET "clr"            LOC = "A7";  # Bank = 1, Signal name = BTN3
+NET "REFRI_RETIRADO" LOC = "M4";  # Bank = 0, Signal name = BTN2
+NET "MOEDA_RETIRADA" LOC = "C11"; # Bank = 2, Signal name = BTN1
+NET "MOEDA_ACK"      LOC = "G12"; # Bank = 0, Signal name = BTN0
+
+NET "RETURN_COIN"      LOC = "M11";  # Bank = 2, Signal name = LD1
+NET "REFRI_DISPONIVEL" LOC = "M5" ;  # Bank = 2, Signal name = LD0
+
+NET "COIN<1>" LOC = "L3";   # Bank = 3,  Signal name = SW1
+NET "COIN<0>" LOC = "P11";  # Bank = 2,  Signal name = SW0
+
+NET "clk" LOC = "B8"; # Bank = 0, Signal name = MCLK
+
+NET "output_7seg<6>" LOC = "L14"; # Bank = 0, Signal name = MCLK
+NET "output_7seg<5>" LOC = "H12";
+NET "output_7seg<4>" LOC = "N14";
+NET "output_7seg<3>" LOC = "N11";
+NET "output_7seg<2>" LOC = "P12";
+NET "output_7seg<1>" LOC = "L13";
+NET "output_7seg<0>" LOC = "M12";
+#NET "dp" LOC = "N13";
+
+NET "output_an<3>" LOC = "K14";
+NET "output_an<2>" LOC = "M13";
+NET "output_an<1>" LOC = "J12";
+NET "output_an<0>" LOC = "F12";
