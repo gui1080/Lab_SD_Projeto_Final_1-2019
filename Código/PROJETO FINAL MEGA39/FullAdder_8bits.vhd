@@ -1,13 +1,13 @@
 Library ieee;
 Use ieee.std_logic_1164.all;
-Use work.fulladd_package.all;
+--Use work.fulladd_package.all;
 
 entity FullAdder_8bits is
   Port(
     A, B : in std_logic_vector(7 downto 0);
     cin : in std_logic; 
     S : out std_logic_vector(7 downto 0);
-    cout : out std_logic;
+    cout : out std_logic
     );
 end entity;
 

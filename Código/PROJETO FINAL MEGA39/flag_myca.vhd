@@ -5,9 +5,9 @@ entity flag_myca is
 
 port(
 
-  D0_F, D1_F, D2_F, D3_F, D4_F, D5_F, D6_F, D7_F: in STD_LOGIC_VECTOR;
-  Sel_F: in STD_LOGIC_VECTOR(3 downto 0);
-  S_M: out STD_LOGIC_VECTOR; 
+  D0_F, D1_F, D2_F, D3_F, D4_F, D5_F, D6_F, D7_F: in STD_LOGIC;
+  Sel_F: in STD_LOGIC_VECTOR(2 downto 0);
+  S_M: out STD_LOGIC 
   );
 
 end flag_myca;

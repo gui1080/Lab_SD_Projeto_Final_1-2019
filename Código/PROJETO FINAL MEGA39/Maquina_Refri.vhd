@@ -75,7 +75,7 @@ component myca2 is
            opcode : in STD_LOGIC_VECTOR (3 downto 0);
            braddr : in STD_LOGIC_VECTOR (7 downto 0); 
            jaddr : in STD_LOGIC_VECTOR (7 downto 0);
-           Q : out STD_LOGIC_VECTOR (7 downto 0);
+           Q : out STD_LOGIC_VECTOR (7 downto 0));
 end component;
 
 component ROM is
@@ -91,9 +91,9 @@ component flag_myca is
 
 port(
 
-  D0_F, D1_F, D2_F, D3_F, D4_F, D5_F, D6_F, D7_F: in STD_LOGIC_VECTOR;
-  Sel_F: in STD_LOGIC_VECTOR(3 downto 0);
-  S_M: out STD_LOGIC_VECTOR; 
+  D0_F, D1_F, D2_F, D3_F, D4_F, D5_F, D6_F, D7_F: in STD_LOGIC;
+  Sel_F: in STD_LOGIC_VECTOR(2 downto 0);
+  S_M: out STD_LOGIC 
   );
 
 end component;
@@ -105,13 +105,21 @@ signal agtbout, aeqbout, altbtout : STD_LOGIC;
 signal CLR_CONT, DEC_TROCO, SOMAR, LOAD_CNT: STD_LOGIC;
 
 signal braddr_myca2, Out_myca2: STD_LOGIC_VECTOR(7 downto 0);
-signal Sel_Flag, opcode_myca2: STD_LOGIC_VECTOR(3 downto 0);
+signal opcode_myca2: STD_LOGIC_VECTOR(3 downto 0);
+signal Sel_Flag: STD_LOGIC_VECTOR(2 downto 0);
 signal Out_Flag: STD_LOGIC;
 signal Out_ROM: STD_LOGIC_VECTOR(19 downto 0);
+
+signal display_braddr_myca2: STD_LOGIC_VECTOR(3 downto 0);
+signal display_opcode: STD_LOGIC_VECTOR(3 downto 0); 
+
+signal not_moeda_ack, not_moeda_retirada: STD_LOGIC; 
 
 begin
 
 Preco_Refri <= "0110"; 
+not_moeda_ack <= not(MOEDA_ACK); 
+not_moeda_retirada <= not(MOEDA_RETIRADA); 
 
 U0 : decoMoeda port map (COIN, Resul_Detc_Moeda);
 
@@ -124,9 +132,10 @@ U2: contador_74LS169 port map(clk, clr_contador, LOAD_CNT, En_contador, '0', Res
 
 U3: comp4bit port map(Res_contador_74LS169, Preco_Refri, '0', '1', '0', agtbout, aeqbout, altbtout);
 
-U4: flag_myca port map(MOEDA_ACK, not(MOEDA_ACK), agtbout, altbtout, aeqbout, REFRI_RETIRADO, MOEDA_RETIRADA, not(MOEDA_RETIRADA), Sel_Flag, Out_Flag); 
+U4: flag_myca port map(MOEDA_ACK, not_moeda_ack, agtbout, altbtout, aeqbout, REFRI_RETIRADO, MOEDA_RETIRADA, not_moeda_retirada, Sel_Flag, Out_Flag); 
 
 U5: myca2 port map(clk, clr, Out_Flag, opcode_myca2, braddr_myca2, "00000000", Out_myca2);
+--Out_Flag = MOEDA_ACK
 
 U6: ROM port map(Out_myca2, Out_ROM);
 
@@ -136,10 +145,40 @@ LOAD_CNT <= Out_ROM(2);
 SOMAR <= Out_ROM(3);
 DEC_TROCO <= Out_ROM(4);
 CLR_CONT <= Out_ROM(5);
-braddr_myca2 <= Out_ROM(13 downto 6);
-Sel_Flag <= Out_ROM(16 downto 14);
-opcode_myca2 <= Out_ROM(19 downto 17);
 
-U7: deco7seg port map(clk, clr, Preco_Refri, Res_contador_74LS169, braddr_myca2(3 downto 0), '0' & opcode_myca2, output_7seg, output_an);
+--braddr_myca2 <= Out_ROM(13 downto 6);
+
+braddr_myca2(7) <= Out_ROM(13);
+braddr_myca2(6) <= Out_ROM(12);
+braddr_myca2(5) <= Out_ROM(11);
+braddr_myca2(4) <= Out_ROM(10);
+braddr_myca2(3) <= Out_ROM(9);
+braddr_myca2(2) <= Out_ROM(8);
+braddr_myca2(1) <= Out_ROM(7);
+braddr_myca2(0) <= Out_ROM(6);
+
+
+--Sel_Flag <= Out_ROM(16 downto 14); 
+Sel_Flag(2) <= Out_ROM(16);
+Sel_Flag(1) <= Out_ROM(15);
+Sel_Flag(0) <= Out_ROM(14);
+
+--opcode_myca2 <= Out_ROM(19 downto 17);
+
+opcode_myca2(2) <= Out_ROM(19);
+opcode_myca2(1) <= Out_ROM(18);
+opcode_myca2(0) <= Out_ROM(17);
+
+display_braddr_myca2(3) <= Out_myca2(3);
+display_braddr_myca2(2) <= Out_myca2(2);
+display_braddr_myca2(1) <= Out_myca2(1);
+display_braddr_myca2(0) <= Out_myca2(0);
+
+display_opcode(3) <= '0'; 
+display_opcode(2) <= opcode_myca2(2);
+display_opcode(1) <= opcode_myca2(1);
+display_opcode(0) <= opcode_myca2(0);
+
+U7: deco7seg port map(clk, clr, Preco_Refri, Res_contador_74LS169, display_braddr_myca2, display_opcode, output_7seg, output_an);
 
 end logic;

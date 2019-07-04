@@ -11,7 +11,7 @@ entity stack is
   clr_2:  in  std_Logic;
   S_aux: in std_Logic_vector(1 downto 0);
   A: in std_Logic_vector(7 downto 0);
-  Q_aux: out std_Logic_vector(7 downto 0);
+  Q_aux: out std_Logic_vector(7 downto 0)
 
   );
 
@@ -47,8 +47,8 @@ input_7, output_7: STD_LOGIC_VECTOR(7 downto 0);
 --signal L, R: STD_LOGIC;
 --signal SHIFT_Ctrl :STD_LOGIC_VECTOR(1 downto 0);
 --signal SHIFTOUT:STD_LOGIC_VECTOR(7 downto 0);
---signal clk: std_Logic;
---signal clr: std_Logic;
+signal clk: std_Logic;
+signal clr: std_Logic;
 --eu realmente n entendi o pq dessa declaração
 
 begin

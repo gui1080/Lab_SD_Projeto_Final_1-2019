@@ -10,7 +10,7 @@ entity myca2 is
            opcode : in STD_LOGIC_VECTOR (3 downto 0);
            braddr : in STD_LOGIC_VECTOR (7 downto 0); 
            jaddr : in STD_LOGIC_VECTOR (7 downto 0);
-           Q : out STD_LOGIC_VECTOR (7 downto 0);
+           Q : out STD_LOGIC_VECTOR (7 downto 0));
 end myca2;
 
 architecture logic of myca2 is
@@ -32,14 +32,14 @@ component FullAdder_8bits is
     A, B : in std_logic_vector(7 downto 0);
     cin : in std_logic; 
     S : out std_logic_vector(7 downto 0);
-    cout : out std_logic;
+    cout : out std_logic
     );
 end component;
 
 component opcodeDecoder is
     Port ( 
            deco_in : in STD_LOGIC_VECTOR (3 downto 0);
-           deco_out : out STD_LOGIC_VECTOR (6 downto 0);
+           deco_out : out STD_LOGIC_VECTOR (6 downto 0));
 end component;
 
 component stack is
@@ -49,7 +49,7 @@ component stack is
   clr_2:  in  std_Logic;
   S_aux: in std_Logic_vector(1 downto 0);
   A: in std_Logic_vector(7 downto 0);
-  Q_aux: out std_Logic_vector(7 downto 0);
+  Q_aux: out std_Logic_vector(7 downto 0)
   );
 
 end component;
@@ -75,7 +75,10 @@ signal entrada_mux: STD_LOGIC_VECTOR (1 downto 0);
 
 begin
 
-deco_in_f <= opcode & flag; 
+deco_in_f(3) <= flag; 
+deco_in_f(2) <= opcode(2);
+deco_in_f(1) <= opcode(1); 
+deco_in_f(0) <= opcode(0); 
 
 U0: opcodeDecoder port map ( deco_in_f, deco_out_f);
 
@@ -83,9 +86,9 @@ U1: FullAdder_8bits port map("00000000", Out_Contador_up_down, deco_out_f(0), Ou
 
 U2: stack port map(clk, clr, deco_out_f(2 downto 1), Out_FullAdder, Out_stack);
 
-U3: MUX4_8 port map(baddr, jaddr, Out_stack, "00000000", deco_out_f(4 downto 3), Out_MUX);
+U3: MUX4_8 port map(braddr, jaddr, Out_stack, "00000000", deco_out_f(4 downto 3), Out_MUX);
 
-U4: unidade_updown port map('0', clr, deco_out_f(5), clk, deco_out_f(6), Out_MUX, off_f, Out_Contador_up_down);
+U4: unidade_updown port map('1', clr, deco_out_f(6), clk, deco_out_f(5), Out_MUX, off_f, Out_Contador_up_down);
 
 Q <= Out_Contador_up_down; 
 

@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity opcodeDecoder is
     Port ( 
            deco_in : in STD_LOGIC_VECTOR (3 downto 0);
-           deco_out : out STD_LOGIC_VECTOR (6 downto 0);
+           deco_out : out STD_LOGIC_VECTOR (6 downto 0));
 end opcodeDecoder;
 
 architecture Behavioral of opcodeDecoder is

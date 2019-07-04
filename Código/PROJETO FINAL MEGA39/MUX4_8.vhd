@@ -17,10 +17,10 @@ end MUX4_8;
 architecture MUX of MUX4_8 is
 
 begin
-  Y1 <= D0 when S1 = '00' else
-        D1 when S1 = '01' else
-        D2 when S1 = '10' else
-        D3 when S1 = '11' else
+  Y1 <= D0 when S1 = "00" else
+        D1 when S1 = "01" else
+        D2 when S1 = "10" else
+        D3 when S1 = "11" else
         "00000000";
 
 end MUX;

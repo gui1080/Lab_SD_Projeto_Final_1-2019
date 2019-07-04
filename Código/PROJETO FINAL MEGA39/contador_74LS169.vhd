@@ -5,7 +5,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity contador_74LS169 is
     Port ( clk : in STD_LOGIC;
            clr : in STD_LOGIC;
-           ld : in STD_LOGIC;
+           lkd : in STD_LOGIC;
            en : in STD_LOGIC;
            up_down : in STD_LOGIC;
            D : in STD_LOGIC_VECTOR (3 downto 0);
@@ -23,7 +23,7 @@ begin
     if (rising_edge(clk)) then
         if (clr = '1') then
             Q_var := (others=>'0');
-        elsif (ld = '1') then
+        elsif (lkd = '1') then
             Q_var := unsigned(D);
         elsif (en = '1') then 
             if (up_down = '0') then
